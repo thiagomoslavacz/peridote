@@ -1,1 +1,188 @@
 @charset "UTF-8";
+
+:root {
+  --title-font: "Dancing Script", cursive;
+  --paragraph-font: "Open Sans", sans-serif;
+
+  --main-color: #135700;
+  --secondary-color: #0e3e32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--paragraph-font);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 10px 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.138);
+}
+
+header .logo {
+  color: var(--secondary-color);
+  font-family: var(--title-font);
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+header ul.nav {
+  display: flex;
+  gap: 50px;
+}
+
+header ul.nav li {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+header ul.nav li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.5s ease;
+}
+
+header ul.nav li:hover::before {
+  width: 100%;
+}
+
+header a.action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 8px 15px;
+  font-size: 16px;
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header a.action:hover {
+  color: white;
+}
+
+header a.action::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: skewX(45deg);
+  transform-origin: left bottom;
+  z-index: -1;
+  transition: width 0.3s ease-in;
+}
+
+header a.action:hover::before {
+  width: 115%;
+}
+
+/* Hero */
+
+section.hero {
+  display: flex;
+  position: relative;
+}
+
+section.hero .container {
+  width: 80vw;
+  height: calc(100vh - 61.6px);
+  background: linear-gradient(to right, #135700, #3ea201, transparent);
+  color: white;
+  z-index: 1;
+  padding-left: 15%;
+  display: grid;
+  place-content: center;
+  justify-content: start;
+  justify-items: center;
+  align-items: center;
+}
+
+section.hero .container .title h1 {
+  font-size: 100px;
+  font-family: var(--title-font);
+  font-weight: 900;
+  text-shadow: 5px 5px 10px var(--secondary-color);
+}
+
+section.hero .container .title h2 {
+  font-weight: 100;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+}
+
+section.hero .container .links {
+  margin-block: 15px 50px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+section.hero .container .links a {
+  color: white;
+  font-size: 40px;
+  transition: opacity 0.3s ease;
+}
+
+section.hero .container .links a:hover {
+  opacity: 0.8;
+}
+
+section.hero .container .adress {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+section.hero .container .adress span {
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+section.hero .background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
+  height: calc(100vh - 61.6px);
+  background: transparent url("imagens/canecas/teste.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* About */
