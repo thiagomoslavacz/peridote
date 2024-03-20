@@ -9,6 +9,16 @@
   --secondary-color: #0e3e32;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-2300px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +31,12 @@ html {
 
 body {
   font-family: var(--paragraph-font);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 a {
@@ -84,7 +100,7 @@ header a.action {
   align-items: center;
   background-color: transparent;
   border: 1px solid black;
-  padding: 8px 15px;
+  padding: 8px 10px;
   font-size: 16px;
   display: flex;
   gap: 5px;
@@ -112,7 +128,7 @@ header a.action::before {
 }
 
 header a.action:hover::before {
-  width: 115%;
+  width: 120%;
 }
 
 /* Hero */
@@ -137,7 +153,7 @@ section#hero .container {
 }
 
 section#hero .container .title h1 {
-  font-size: 100px;
+  font-size: 110px;
   font-family: var(--title-font);
   font-weight: 900;
   text-shadow: 5px 5px 10px var(--secondary-color);
@@ -180,7 +196,7 @@ section#hero .background {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50vw;
+  width: 55vw;
   height: calc(100vh - 61.6px);
   background: transparent url("imagens/background/hero.png") no-repeat center;
   background-size: cover;
@@ -222,6 +238,7 @@ section#about .wrap i {
 section#parallax {
   background: black url("imagens/background/parallax.png") no-repeat center
     fixed;
+  box-shadow: inset 1px 1px 20px 10px rgba(0, 0, 0, 0.3);
   background-size: cover;
   height: 350px;
 }
@@ -229,7 +246,7 @@ section#parallax {
 section#parallax .background {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
   display: grid;
   place-content: center;
@@ -251,15 +268,19 @@ section#parallax .background p span {
 
 /* Mugs */
 
-section#mugs-wrapper {
+section#mugs-wrapper,
+section#others {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 50px;
+  justify-content: center;
+  align-items: center;
   padding-inline: 50px;
-  margin-top: 100px;
+  padding-block: 150px;
+  gap: 50px;
 }
 
-section#mugs-wrapper .container {
+section#mugs-wrapper .container,
+section#others .container {
   position: relative;
   overflow: hidden;
   display: grid;
@@ -268,22 +289,25 @@ section#mugs-wrapper .container {
   transition: height 0.5s ease;
 }
 
-section#mugs-wrapper .container::before {
+section#mugs-wrapper .container::before,
+section#others .container::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 0;
-  background: linear-gradient(to top, black, transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
   transition: height 0.5s ease;
 }
 
-section#mugs-wrapper .container:hover::before {
+section#mugs-wrapper .container:hover::before,
+section#others .container:hover::before {
   height: 60%;
 }
 
-section#mugs-wrapper .container a.cart {
+section#mugs-wrapper .container a.cart,
+section#others .container a.cart {
   position: absolute;
   bottom: -15%;
   left: 50%;
@@ -301,11 +325,17 @@ section#mugs-wrapper .container:hover a.cart {
   bottom: 15%;
 }
 
-section#mugs-wrapper a.cart:hover {
+section#others .container:hover a.cart {
+  bottom: 10%;
+}
+
+section#mugs-wrapper a.cart:hover,
+section#others a.cart:hover {
   opacity: 0.8;
 }
 
-section#mugs-wrapper .container p {
+section#mugs-wrapper .container p,
+section#others .container p {
   position: absolute;
   bottom: -15%;
   left: 50%;
@@ -314,8 +344,55 @@ section#mugs-wrapper .container p {
   transition: bottom 0.5s ease;
 }
 
-section#mugs-wrapper .container:hover p {
+section#mugs-wrapper .container:hover p,
+section#others .container:hover p {
   bottom: 6%;
 }
 
 /* About Mugs */
+
+section#mugs-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  }
+
+section#mugs-slider .slider {
+  position: relative;
+  background: linear-gradient(45deg, black, #3d3d3d);
+  overflow: hidden;
+}
+
+section#mugs-slider .slider::before,
+section#mugs-slider .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  z-index: 1;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: blur(20px);
+}
+
+section#mugs-slider .slider::before {
+  left: 0;
+}
+
+section#mugs-slider .slider::after {
+  right: 0;
+}
+
+section#mugs-slider .slider ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: slide 20s linear infinite;
+}
+
+section#mugs-slider .slider img {
+  width: 300px;
+  vertical-align: bottom;
+}
