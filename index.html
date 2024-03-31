@@ -15,16 +15,21 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-
     <!-- Icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <!-- Favicon -->
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- JS -->
+    <script src="script.js" defer></script>
     <!-- Title -->
     <title>Peridote</title>
   </head>
@@ -33,8 +38,8 @@
     <header>
       <div class="logo">Peridote</div>
       <ul class="nav">
-        <li><a href="#mugs-wrapper">Canecas</a></li>
         <li><a href="#mugs-about">Sobre</a></li>
+        <li><a href="#mugs-wrapper">Canecas</a></li>
         <li><a href="#others">Outros</a></li>
       </ul>
       <a
@@ -97,11 +102,90 @@
       </div>
     </section>
 
-    <!-- Sobre as Canecas -->
-    <section id="mugs-about"></section>
+    <!-- Profile -->
+    <section id="profile">
+      <div class="container-img">
+        <div class="background-more"></div>
+        <img src="imagens/background/parallax.png" class="logo" alt="Logo" />
+        <img src="imagens/profile/gaby-profile.JPG" alt="Gabriela Macedo" />
+      </div>
+      <div class="content">
+        <div class="titles">
+          <h1>Peridote</h1>
+          <h2>Gabriela Macedo</h2>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aut
+          quos temporibus iste, laborum iure esse ipsam praesentium reiciendis a
+          magnam, et fugiat eaque adipisci ratione repellendus quam distinctio
+          ducimus!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio,
+          veritatis numquam illum mollitia id, pariatur vel laudantium
+          repudiandae eaque laboriosam enim! Eligendi facere a ex accusamus
+          optio non repellat, magni, vitae ipsum libero pariatur provident
+          corporis, obcaecati deleniti? Atque!
+        </p>
+        <a href="#" class="action">Faça um Orçamento!</a>
+      </div>
+    </section>
 
-    <!-- Canecas -->
+    <!-- Mugs About -->
+    <section id="mugs-about">
+      <div class="header">
+        <h2><i class="bx bx-chevron-right"></i> Materiais:</h2>
+        <i id="arrow-icon" class="bx bx-chevron-down"></i>
+      </div>
+      <div id="wrapper">
+        <div class="container">
+          <div class="info">
+            <img src="imagens/materials/material08.jpg" alt="Material" />
+            <span>Mágica com interior colorido</span>
+            <i class='bx bxs-star'></i>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material01.jpg" alt="Material" />
+            <span>Faixa de Glitter</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material02.jpg" alt="Material" />
+            <span>Glitter</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material03.jpg" alt="Material" />
+            <span>Mágica</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material06.jpg" alt="Material" />
+            <span>Metalizada</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material07.jpg" alt="Material" />
+            <span>Vidro</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material09.jpg" alt="Material" />
+            <span>Polímero com interior colorido</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material04.jpg" alt="Material" />
+            <span>Marmorizada</span>
+          </div>
+          <div class="info">
+            <img src="imagens/materials/material05.jpg" alt="Material" />
+            <span>Vidro com fundo degradê</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mugs -->
     <section id="mugs-wrapper">
+      <div class="info-tag">
+        <h2>Canecas:</h2>
+        <p>Valores a partir de: <span>R$ 35,00</span>.</p>
+      </div>
       <div class="container">
         <img src="imagens/gallery/mugs/c-landscape01.jpg" alt="Caneca" />
         <a
@@ -194,8 +278,11 @@
       </div>
     </section>
 
-    <!-- Sobre as Canecas -->
+    <!-- Slider -->
     <section id="mugs-slider">
+      <h2 class="info-tag">
+        <i class="bx bx-chevron-right"></i> Mais Canecas e Diversos:
+      </h2>
       <div class="slider">
         <ul>
           <li>
@@ -244,8 +331,12 @@
       </div>
     </section>
 
-    <!-- Outros -->
+    <!-- Others -->
     <section id="others">
+      <div class="info-tag">
+        <h2><i class="bx bx-chevron-right"></i> Outros:</h2>
+        <p>Valores a partir de: <span>R$ 35,00</span>.</p>
+      </div>
       <div class="container">
         <img src="imagens/gallery/shirts/shirt01.jpg" alt="" />
         <a
@@ -308,9 +399,51 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <section id="adress"></section>
+    <!-- Adress -->
+    <section class="adress-footer">
+      <h2>
+        Faça um <br />
+        Orçamento!
+      </h2>
+      <a
+        href="https://www.instagram.com/peridoteatelie/"
+        target="_blank"
+        class="action"
+        ><i class="bx bx-cart"></i> Comprar</a
+      >
+    </section>
 
-    <footer></footer>
+    <!-- Footer -->
+    <footer>
+      <div class="col">
+        <h2 class="title">Peridote</h2>
+        <ul>
+          <li><i class="bx bxs-coffee"></i> Produtos Personalizados</li>
+          <li><i class="bx bxs-gift"></i> Lembranças e Presentes</li>
+          <li><i class="bx bxs-palette"></i> Estampas em Geral</li>
+          <li><i class="bx bxs-truck"></i> Entregas em todo o Brasil</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Informações</h2>
+        <p>🇧🇷 Jardim Santo André - SP</p>
+      </div>
+      <div class="col">
+        <h2>Contato</h2>
+        <div class="social">
+          <div class="instagram">
+            <a href="https://www.instagram.com/peridoteatelie/"
+              ><i class="bx bxl-instagram"></i><span>Instagram</span></a
+            >
+          </div>
+          <div class="whatsapp">
+            <a
+              href="https://api.whatsapp.com/send/?phone=5511979620970&text&type=phone_number&app_absent=0"
+              ><i class="bx bxl-whatsapp"></i><span>Whatsapp</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

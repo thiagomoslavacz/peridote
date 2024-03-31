@@ -4,9 +4,9 @@
   --title-font: "Dancing Script", cursive;
   --paragraph-font: "Open Sans", sans-serif;
 
+  --main-color: #228b22;
+  --secondary-color: #135700;
   --background-color: #232323;
-  --main-color: #135700;
-  --secondary-color: #0e3e32;
 }
 
 @keyframes slide {
@@ -67,7 +67,7 @@ header .logo {
   color: var(--main-color);
   font-family: var(--title-font);
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 header ul.nav {
@@ -78,6 +78,8 @@ header ul.nav {
 header ul.nav li {
   position: relative;
   padding-bottom: 2px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 header ul.nav li::before {
@@ -102,6 +104,7 @@ header a.action {
   border: 1px solid black;
   padding: 8px 10px;
   font-size: 16px;
+  font-weight: 600;
   display: flex;
   gap: 5px;
   overflow: hidden;
@@ -139,9 +142,9 @@ section#hero {
 }
 
 section#hero .container {
-  width: 80vw;
+  width: 70vw;
   height: calc(100vh - 61.6px);
-  background: linear-gradient(to right, #135700, #3ea201, transparent);
+  background: linear-gradient(to right, #135700, #228b22, transparent);
   color: white;
   z-index: 1;
   padding-left: 15%;
@@ -162,7 +165,7 @@ section#hero .container .title h1 {
 section#hero .container .title h2 {
   font-weight: 100;
   padding-bottom: 5px;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid white;
 }
 
 section#hero .container .links {
@@ -188,8 +191,8 @@ section#hero .container .adress {
 }
 
 section#hero .container .adress span {
-  color: var(--secondary-color);
-  border-bottom: 1px solid var(--secondary-color);
+  color: black;
+  border-bottom: 1px solid rgb(33, 33, 33);
 }
 
 section#hero .background {
@@ -266,6 +269,158 @@ section#parallax .background p span {
   font-weight: 600;
 }
 
+/* Profile */
+
+section#profile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  background: linear-gradient(to bottom, #dfdfdf, transparent);
+  margin: 100px 100px 0 100px;
+}
+
+.background-more {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 85%;
+  background: linear-gradient(to left, #f7f5f6, white);
+}
+
+section#profile img {
+  width: 400px;
+  border-bottom-right-radius: 50px;
+}
+
+section#profile img.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2%;
+  right: 1.2%;
+}
+
+section#profile .content {
+  margin-right: 100px;
+}
+
+section#profile .content .titles {
+  text-align: center;
+}
+
+section#profile .content .titles h1 {
+  font-size: 100px;
+  font-family: var(--title-font);
+  line-height: 95px;
+  color: var(--main-color);
+  text-shadow: 2px 2px 2px var(--secondary-color);
+}
+
+section#profile .content .titles h2 {
+  display: inline-block;
+  font-weight: 400;
+  padding-inline: 55px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--main-color);
+}
+
+section#profile .content p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+section#profile .content a.action {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  border: 1px solid transparent;
+  color: white;
+  transition: opacity 0.3s ease-in;
+}
+
+section#profile .content a.action:hover {
+  opacity: 0.8;
+}
+
+/* Mugs About */
+
+section#mugs-about {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+section#mugs-about .header {
+  background-color: beige;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+section#mugs-about .header h2 {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+section#mugs-about .header > i {
+  background-color: #dac8b3;
+  font-size: 40px;
+  margin-right: -35px;
+  padding: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+section#mugs-about .header > i:hover {
+  opacity: 0.8;
+}
+
+section#mugs-about #wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+section#mugs-about .container {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 50px;
+  text-align: center;
+}
+
+section#mugs-about .container .info {
+  position: relative;
+}
+
+section#mugs-about .container .info span {
+  display: block;
+  padding-block: 5px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+section#mugs-about .container .info:nth-child(1) i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: yellow;
+  font-size: 25px;
+}
+
 /* Mugs */
 
 section#mugs-wrapper,
@@ -277,6 +432,38 @@ section#others {
   padding-inline: 50px;
   padding-block: 150px;
   gap: 50px;
+}
+
+section#mugs-wrapper div.info-tag,
+section#others div.info-tag {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section#mugs-wrapper div.info-tag h2,
+section#others div.info-tag h2 {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+section#mugs-wrapper div.info-tag p,
+section#others div.info-tag p {
+  font-size: 20px;
+  overflow: hidden;
+}
+
+section#mugs-wrapper div.info-tag p span,
+section#others div.info-tag p span {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 section#mugs-wrapper .container,
@@ -354,9 +541,23 @@ section#others .container:hover p {
 section#mugs-slider {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  }
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+section#mugs-slider h2.info-tag {
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+section#mugs-slider h2.info-tag i {
+  font-size: 35px;
+  font-family: bolder;
+}
 
 section#mugs-slider .slider {
   position: relative;
@@ -395,4 +596,109 @@ section#mugs-slider .slider ul {
 section#mugs-slider .slider img {
   width: 300px;
   vertical-align: bottom;
+}
+
+/* Adress */
+
+.adress-footer {
+  padding: 50px 0 50px 50px;
+  display: grid;
+  place-items: center;
+  place-content: start;
+  gap: 15px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.adress-footer h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.adress-footer a.action {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.5s ease;
+}
+
+.adress-footer a.action:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+
+footer {
+  background-color: black;
+  color: #c3c6c9;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+  padding: 30px 200px;
+  font-size: 20px;
+}
+
+footer h2 {
+  color: var(--secondary-color);
+  font-size: 30px;
+}
+
+footer h2.title {
+  font-family: var(--title-font);
+  font-size: 60px;
+}
+
+footer .col:nth-child(2) {
+  margin-top: -75px;
+}
+
+footer .col:nth-child(1) {
+  text-align: start;
+}
+
+footer .col:nth-child(1) ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+footer .col:nth-child(1) ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .col:nth-child(1) ul i {
+  color: white;
+  font-size: 25px;
+}
+
+footer .col:nth-child(2) p {
+  margin-top: 10px;
+}
+
+footer .col:nth-child(3) .social {
+  margin-top: 20px;
+}
+
+footer .col:nth-child(3) .social a {
+  color: #c3c6c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+footer .col:nth-child(3) .social a span {
+}
+
+footer .col:nth-child(3) i {
+  font-size: 30px;
 }
