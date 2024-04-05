@@ -38,11 +38,12 @@
     <header>
       <div class="logo">Peridote</div>
       <ul class="nav">
-        <li><a href="#mugs">Canecas</a></li>
-        <li><a href="#acrylic">Acrílico</a></li>
-        <li><a href="#shirts">Camisetas</a></li>
-        <li><a href="#others">Outros</a></li>
+        <li><a href="#mugs-nav">Canecas</a></li>
+        <li><a href="#acrylic-nav">Acrílico</a></li>
+        <li><a href="#shirts-nav">Camisetas</a></li>
+        <li><a href="#others-nav">Outros</a></li>
       </ul>
+      <button id="menu" class="menu"><i class="bx bx-menu"></i></button>
       <a
         href="https://www.instagram.com/peridoteatelie/"
         target="_blank"
@@ -50,6 +51,8 @@
         ><i class="bx bx-cart"></i> Comprar</a
       >
     </header>
+
+    <div class="menu-window"></div>
 
     <!-- Hero -->
     <section id="hero">
@@ -59,10 +62,17 @@
           <h2>Ateliê</h2>
         </div>
         <div class="links">
-          <a href="https://www.instagram.com/peridoteatelie/" target="_blank"
-            ><i class="bx bx-cart"></i
-          ></a>
-          <a href="#"><i class="bx bxs-file-pdf"></i></a>
+          <a
+            class="action"
+            href="https://www.instagram.com/peridoteatelie/"
+            target="_blank"
+            ><i class="bx bx-cart"></i> Faça um <br />
+            Orçamento!</a
+          >
+          <a class="action" href="#" target="_blank"
+            ><i class="bx bxs-file-pdf"></i> Produtos <br />
+            em PDF</a
+          >
         </div>
         <p class="adress">
           Veja nossos <span>produtos</span> abaixo
@@ -106,7 +116,6 @@
     <!-- Profile -->
     <section id="profile">
       <div class="container-img">
-        <div class="background-more"></div>
         <img src="imagens/background/parallax.png" class="logo" alt="Logo" />
         <img src="imagens/profile/gaby-profile.JPG" alt="Gabriela Macedo" />
       </div>
@@ -128,7 +137,12 @@
           optio non repellat, magni, vitae ipsum libero pariatur provident
           corporis, obcaecati deleniti? Atque!
         </p>
-        <a href="#" class="action">Faça um Orçamento!</a>
+        <a
+          href="https://www.instagram.com/peridoteatelie/"
+          target="_blank"
+          class="action"
+          >Faça um Orçamento!</a
+        >
       </div>
     </section>
 
@@ -182,11 +196,11 @@
     </section>
 
     <!-- Mugs -->
+    <div id="mugs-nav" class="info-tag">
+      <h2>Canecas:</h2>
+      <p>Valores a partir de: <span>R$ 35,00</span>.</p>
+    </div>
     <section id="mugs">
-      <div class="info-tag">
-        <h2>Canecas:</h2>
-        <p>Valores a partir de: <span>R$ 35,00</span>.</p>
-      </div>
       <div class="container">
         <img src="imagens/gallery/mugs/c-landscape01.jpg" alt="Caneca" />
         <a
@@ -280,12 +294,11 @@
     </section>
 
     <!-- Acrylic -->
-
+    <div id="acrylic-nav" class="info-tag">
+      <h2>Acrílicos:</h2>
+      <p>Valores a partir de: <span>R$ 3,50</span>.</p>
+    </div>
     <section id="acrylic">
-      <div class="info-tag">
-        <h2>Acrílicos:</h2>
-        <p>Valores a partir de: <span>R$ 35,00</span>.</p>
-      </div>
       <div class="container">
         <img src="imagens/gallery/acrylic/acrylic01.jpg" alt="Acrílico" />
         <a
@@ -429,11 +442,11 @@
     </section>
 
     <!-- Shirts -->
+    <div id="shirts-nav" class="info-tag">
+      <h2><i class="bx bx-chevron-right"></i> Camisas:</h2>
+      <p>Valores a partir de: <span>R$ 35,00</span>.</p>
+    </div>
     <section id="shirts">
-      <div class="info-tag">
-        <h2><i class="bx bx-chevron-right"></i> Camisas:</h2>
-        <p>Valores a partir de: <span>R$ 35,00</span>.</p>
-      </div>
       <div class="container">
         <img src="imagens/gallery/shirts/shirt01.jpg" alt="" />
         <a
@@ -477,11 +490,11 @@
     </section>
 
     <!-- Others -->
+    <div id="others-nav" class="info-tag">
+      <h2><i class="bx bx-chevron-right"></i> Outros:</h2>
+      <p>Valores a partir de: <span>R$ 35,00</span>.</p>
+    </div>
     <section id="others">
-      <div class="info-tag">
-        <h2><i class="bx bx-chevron-right"></i> Outros:</h2>
-        <p>Valores a partir de: <span>R$ 35,00</span>.</p>
-      </div>
       <div class="container">
         <img src="imagens/gallery/others/others01.png" alt="Camiseta" />
         <a
