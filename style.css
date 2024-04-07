@@ -298,7 +298,7 @@ section#profile {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background-color: #dfdfdf;
-  margin: 100px 200px 0 200px;
+  margin: 100px 150px 0 150px;
 }
 
 section#profile img {
@@ -404,9 +404,10 @@ section#mugs-about #wrapper {
 }
 
 section#mugs-about .container {
-  margin: 50px;
+  margin-block: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: center;
   align-items: end;
   gap: 50px;
   text-align: center;
@@ -418,6 +419,7 @@ section#mugs-about .container .info {
 
 section#mugs-about .container .info span {
   display: block;
+  margin-top: 10px;
   padding-block: 5px;
   font-weight: 600;
   color: white;
@@ -443,6 +445,7 @@ section#others {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-items: center;
   align-items: end;
   gap: 30px;
 }
@@ -613,6 +616,7 @@ footer {
   color: #c3c6c9;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px 200px;
@@ -676,109 +680,144 @@ footer .col:nth-child(3) i {
   font-size: 30px;
 }
 
-@media screen and (max-width: 1488px) {
-  section#mugs,
-  section#shirts,
-  section#acrylic,
-  section#others {
-    justify-content: space-evenly;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.menu-window {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 350px;
+  height: 100%;
+  background: linear-gradient(to bottom, #135700, #228b22);
+  color: #fff;
+  z-index: 1000;
+  transition: right 0.5s ease;
+}
+
+.menu-window.open {
+  right: 0;
+}
+
+.menu-window .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+
+.menu-window .header h1 {
+  font-family: var(--title-font);
+  font-size: 50px;
+}
+
+.menu-window p {
+  text-align: center;
+  color: #e7e7e7;
+  font-style: italic;
+}
+
+.menu-window .nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 100px 20px 150px 20px;
+}
+
+.menu-window .nav li {
+  margin-bottom: 15px;
+}
+
+.menu-window .nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.menu-window .nav li a:hover,
+.menu-window .bx-x:hover {
+  color: #ccc;
+}
+
+.menu-window .bx-x {
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  section#profile {
+    margin-inline: 0;
   }
 
-  section#mugs .container > img,
-  section#shirts .container > img,
-  section#acrylic .container > img,
-  section#others .container > img {
-    width: 400px;
+  footer {
+    padding-inline: 100px;
   }
 }
 
-@media screen and (max-width: 1340px) {
-  section#mugs .container > img,
-  section#shirts .container > img,
-  section#acrylic .container > img,
-  section#others .container > img {
-    width: 350px;
-  }
-
-  section#mugs .container a.cart {
-    bottom: -20%;
-  }
-
-  section#mugs .container:hover a.cart {
-    bottom: 17%;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  section#about {
-    grid-template-columns: repeat(2, 400px);
-  }
-
-  section#about div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-
-  section#mugs-about {
-    width: 700px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1024px) {
   header {
-    padding-inline: 50px;
-  }
-
-  section#about {
-    grid-template-columns: repeat(2, 200px);
-  }
-
-  section#about div {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  section#mugs,
-  section#shirts,
-  section#acrylic,
-  section#others {
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  header {
-    padding-inline: 30px;
+    padding-inline: 75px;
   }
 
   section#hero .container {
-    width: 100vw;
-    justify-content: center;
-    padding: 0;
-    background: linear-gradient(to bottom, #135700, #228b22);
+    padding-left: 8%;
   }
 
-  section#hero .background {
+  section#about {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  section#parallax {
+    margin-bottom: 100px;
+  }
+
+  section#profile {
+    grid-template-columns: 1fr;
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 100px;
+  }
+
+  section#profile .container-img {
     display: none;
   }
 
+  section#profile .content {
+    margin: 0;
+  }
+
   section#mugs-about {
-    width: 600px;
+    width: 650px;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: start;
+    gap: 100px;
+  }
+
+  footer .col:nth-child(3) .social a {
+    justify-content: start;
   }
 }
 
 @media screen and (max-width: 768px) {
   header {
-    padding-inline: 50px;
+    padding-inline: 30px;
   }
 
-  header ul.nav {
-    display: none;
-  }
-
+  header ul.nav,
   header a.action {
     display: none;
   }
@@ -786,51 +825,68 @@ footer .col:nth-child(3) i {
   header .menu {
     display: flex;
     background-color: transparent;
-    font-size: 40px;
     border: none;
-    order: 3;
+    font-size: 40px;
     cursor: pointer;
   }
 
-  section#hero .container .title {
-    margin-bottom: 20px;
+  section#hero {
+    background: linear-gradient(to bottom, #135700, #228b22);
   }
 
-  section#hero .container .links {
-    gap: 50px;
+  section#hero .container {
+    width: 100vw;
+    padding: 0;
+    justify-content: center;
+  }
+
+  section#hero .background {
+    display: none;
   }
 
   section#about {
+    grid-template-columns: repeat(2, 175px);
     gap: 30px;
   }
 
+  section#profile {
+    width: 100%;
+    padding-inline: 40px;
+  }
+
   section#parallax .background p {
-    width: 300px;
-    text-align: start;
-    border-color: transparent;
+    font-size: 17px;
   }
 
   section#mugs-about {
-    width: 475px;
+    width: 90vw;
+    margin: 0 auto;
   }
 
   section#mugs-about .header {
-    margin: 0 auto;
-    width: 375px;
-  }
-
-  section#mugs-about .container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    width: 350px;
+    margin: 0;
   }
 
   div.info-tag {
     padding-left: 20px;
   }
 
-  section#mugs .container > img,
-  section#shirts .container > img,
-  section#acrylic .container > img,
-  section#others .container > img {
-    width: 450px;
+  section.adress-footer {
+    padding-left: 20px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding-block: 50px;
+    gap: 0;
+  }
+
+  footer .col:nth-child(1) {
+    margin-bottom: 150px;
+  }
+
+  footer .col:nth-child(2) {
+    margin-bottom: 100px;
   }
 }

@@ -17,3 +17,33 @@ document.addEventListener("DOMContentLoaded", function () {
     isWrapperOpen = !isWrapperOpen;
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var menuButton = document.getElementById("menu");
+  var menuWindow = document.getElementById("menu-window");
+  var overlay = document.getElementById("overlay");
+  var closeButton = document.querySelector(".bx-x");
+  var navLinks = document.querySelectorAll(".nav li a");
+
+  menuButton.addEventListener("click", function () {
+    menuWindow.classList.toggle("open");
+    overlay.style.display = "block"; //
+  });
+
+  closeButton.addEventListener("click", function () {
+    menuWindow.classList.remove("open");
+    overlay.style.display = "none";
+  });
+
+  overlay.addEventListener("click", function () {
+    menuWindow.classList.remove("open");
+    overlay.style.display = "none";
+  });
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      menuWindow.classList.remove("open");
+      overlay.style.display = "none";
+    });
+  });
+});
