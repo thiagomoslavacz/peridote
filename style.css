@@ -56,7 +56,6 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
   z-index: 2;
   padding: 10px 15%;
   display: flex;
@@ -306,7 +305,7 @@ section#parallax .background p span {
 section#mugs-about {
   width: 900px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-block: 150px;
 }
 
 section#mugs-about .header {
@@ -385,6 +384,7 @@ section#mugs-about .container .info:nth-child(1) i {
   justify-items: center;
   align-items: end;
   gap: 30px;
+  margin-bottom: 200px;
 }
 
 .products img,
@@ -397,7 +397,8 @@ section#mugs-about .container .info:nth-child(1) i {
 }
 
 div.info-tag {
-  padding: 150px 0 25px 50px;
+  padding-bottom: 15px;
+  margin-left: 55px;
 }
 
 div.info-tag h2 {
@@ -440,7 +441,7 @@ div.info-tag p span {
   gap: 5px;
   overflow: hidden;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
-  transition: height 0.5s ease;
+  transition: height 0.7s ease;
 }
 
 .products .container:hover .background {
@@ -448,7 +449,8 @@ div.info-tag p span {
 }
 
 .products .container .background > * {
-  opacity: 0.7;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
 }
 
 .products .container:hover .background > * {
@@ -586,7 +588,7 @@ footer .col:nth-child(2) a:hover {
   right: -100%;
   width: 80%;
   max-width: 350px;
-  height: 100%;
+  height: 100dvh;
   background: linear-gradient(to bottom, #135700, #228b22);
   color: #fff;
   z-index: 1000;
@@ -644,6 +646,7 @@ footer .col:nth-child(2) a:hover {
   transition: color 0.3s ease;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1200px) {
   .info-tag {
     margin-left: 85px;
@@ -733,8 +736,8 @@ footer .col:nth-child(2) a:hover {
   }
 
   section#about {
-    grid-template-columns: repeat(2, 175px);
-    gap: 40px;
+    grid-template-columns: repeat(2, 160px);
+    gap: 20px;
   }
 
   section#about .wrap p {
@@ -757,6 +760,10 @@ footer .col:nth-child(2) a:hover {
 
   section#mugs-about img {
     width: 250px;
+  }
+
+  section#mugs-about .header {
+    margin-left: -25px;
   }
 
   section#mugs-about .container {

@@ -20,12 +20,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
     <!-- Favicon -->
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <!-- Body Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- JS -->
@@ -70,11 +68,11 @@
     <!-- Hero -->
     <section id="hero">
       <div class="container">
-        <div class="title">
+        <div class="title" data-aos="fade-right">
           <h1>Peridote</h1>
           <h2>Ateliê</h2>
         </div>
-        <div class="links">
+        <div class="links" data-aos="fade-right">
           <a
             class="action"
             href="https://www.instagram.com/peridoteatelie/"
@@ -87,7 +85,7 @@
             em PDF</a
           >
         </div>
-        <p class="adress">
+        <p class="adress" data-aos="fade-right">
           Veja nossos <span>produtos</span> abaixo
           <i class="bx bxs-chevron-down"></i>
         </p>
@@ -96,7 +94,7 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" data-aos="fade-right">
       <div class="wrap">
         <i class="bx bxs-coffee"></i>
         <p>Produtos Personalizados</p>
@@ -127,7 +125,7 @@
     </section>
 
     <!-- Mugs About -->
-    <section id="mugs-about">
+    <section id="mugs-about" data-aos="fade-up">
       <div class="header">
         <h2><i class="bx bx-chevron-right"></i> Materiais:</h2>
         <i id="arrow-icon" class="bx bx-chevron-down"></i>
@@ -176,11 +174,11 @@
     </section>
 
     <!-- Mugs -->
-    <div id="mugs-nav" class="info-tag">
+    <div id="mugs-nav" class="info-tag" data-aos="fade-up">
       <h2>Canecas:</h2>
       <p>Valores a partir de: <span>R$ 35,00</span>.</p>
     </div>
-    <section id="mugs" class="products">
+    <section id="mugs" class="products" data-aos="fade-up">
       <div class="container">
         <img src="imagens/gallery/mugs/c-landscape01.jpg" alt="Caneca" />
         <div class="background">
@@ -292,11 +290,11 @@
     </section>
 
     <!-- Acrylic -->
-    <div id="acrylic-nav" class="info-tag">
+    <div id="acrylic-nav" class="info-tag" data-aos="fade-up">
       <h2>Acrílicos:</h2>
       <p>Valores a partir de: <span>R$ 3,50</span>.</p>
     </div>
-    <section id="acrylic" class="products">
+    <section id="acrylic" class="products" data-aos="fade-up">
       <div class="container">
         <img src="imagens/gallery/acrylic/acrylic01.jpg" alt="Acrílico" />
         <div class="background">
@@ -468,11 +466,11 @@
     </section>
 
     <!-- Shirts -->
-    <div id="shirts-nav" class="info-tag">
+    <div id="shirts-nav" class="info-tag" data-aos="fade-up">
       <h2><i class="bx bx-chevron-right"></i> Camisas:</h2>
       <p>Valores a partir de: <span>R$ 35,00</span>.</p>
     </div>
-    <section id="shirts" class="products">
+    <section id="shirts" class="products" data-aos="fade-up">
       <div class="container">
         <img src="imagens/gallery/shirts/shirt01.jpg" alt="" />
         <div class="background">
@@ -524,11 +522,11 @@
     </section>
 
     <!-- Others -->
-    <div id="others-nav" class="info-tag">
+    <div id="others-nav" class="info-tag" data-aos="fade-up">
       <h2><i class="bx bx-chevron-right"></i> Outros:</h2>
       <p>Valores a partir de: <span>R$ 35,00</span>.</p>
     </div>
-    <section id="others" class="products">
+    <section id="others" class="products" data-aos="fade-up">
       <div class="container">
         <img src="imagens/gallery/others/others01.png" alt="Camiseta" />
         <div class="background">
@@ -629,7 +627,7 @@
 
     <!-- Adress -->
     <section class="adress-footer">
-      <h2>
+      <h2 data-aos="fade-right">
         Faça um <br />
         Orçamento!
       </h2>
@@ -637,13 +635,14 @@
         href="https://www.instagram.com/peridoteatelie/"
         target="_blank"
         class="action"
+        data-aos="fade-right"
         ><i class="bx bx-cart"></i> Comprar</a
       >
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="col">
+      <div class="col" data-aos="fade-right">
         <h2 class="title">Peridote</h2>
         <ul>
           <li><i class="bx bxs-coffee"></i> Produtos Personalizados</li>
@@ -652,7 +651,7 @@
           <li><i class="bx bxs-truck"></i> Entregas em todo o Brasil</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" data-aos="fade-left">
         <h2>Informações</h2>
         <p>🇧🇷 Jardim Santo André - SP</p>
         <div class="social">
@@ -675,5 +674,14 @@
         </div>
       </div>
     </footer>
+
+    <!-- Body Scroll Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 100,
+        duration: 1250,
+      });
+    </script>
   </body>
 </html>
