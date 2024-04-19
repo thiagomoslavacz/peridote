@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var menuButton = document.getElementById("menu");
   var menuWindow = document.getElementById("menu-window");
   var overlay = document.getElementById("overlay");
-  var closeButton = document.querySelector(".bx-x");
+  var closeButton = document.getElementById("close");
   var navLinks = document.querySelectorAll(".nav li a");
   var body = document.querySelector("body");
 
