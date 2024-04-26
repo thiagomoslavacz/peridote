@@ -39,6 +39,11 @@ ul {
   list-style: none;
 }
 
+img.border-img {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 /* Header */
 
 header {
@@ -372,7 +377,7 @@ section#mugs-about .container .info:nth-child(1) i {
   flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
-  align-items: end;
+  align-items: top;
   gap: 30px;
   margin-bottom: 200px;
 }
