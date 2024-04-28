@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Lang -->
 <html lang="pt-br">
   <head>
     <!-- Meta Tags -->
@@ -35,7 +36,7 @@
       <div class="logo">Peridote</div>
       <ul class="nav">
         <li><a href="#mugs-nav">Canecas</a></li>
-        <li><a href="#acrylic-nav">Acrílico</a></li>
+        <li><a href="#acrylic-nav">Acrílicos</a></li>
         <li><a href="#shirts-nav">Camisetas</a></li>
         <li><a href="#others-nav">Outros</a></li>
       </ul>
@@ -44,7 +45,7 @@
         href="https://www.instagram.com/peridoteatelie/"
         target="_blank"
         class="action"
-        ><i class="bx bx-cart"></i> Comprar</a
+        ><i class="bx bx-cart"></i> Faça um Orçamento</a
       >
     </header>
 
@@ -56,7 +57,7 @@
       </div>
       <ul class="nav">
         <li><a href="#mugs-nav">Canecas</a></li>
-        <li><a href="#acrylic-nav">Acrílico</a></li>
+        <li><a href="#acrylic-nav">Acrílicos</a></li>
         <li><a href="#shirts-nav">Camisetas</a></li>
         <li><a href="#others-nav">Outros</a></li>
       </ul>
@@ -78,13 +79,10 @@
             ><i class="bx bx-cart"></i> Faça um <br />
             Orçamento!</a
           >
-          <a
-            class="action"
-            href="https://1drv.ms/b/s!AsWrjL6SshjHh08s9D48zcioVHTc"
-            target="_blank"
-            ><i class="bx bxs-file-pdf"></i> Produtos <br />
-            em PDF</a
-          >
+          <button onclick="downloadPDF()" class="action">
+            <i class="bx bxs-file-pdf"></i> produtos <br />
+            em PDF
+          </button>
         </div>
         <p class="adress">
           Veja nossos <span>produtos</span> abaixo
@@ -522,7 +520,7 @@
 
     <!-- Shirts -->
     <div id="shirts-nav" class="info-tag">
-      <h2><i class="bx bx-chevron-right"></i> Camisas:</h2>
+      <h2><i class="bx bx-chevron-right"></i> Camisetas:</h2>
       <p>Valores a partir de: <span>R$ 35,00</span>.</p>
     </div>
     <section id="shirts" class="products">
@@ -579,7 +577,7 @@
     <!-- Others -->
     <div id="others-nav" class="info-tag">
       <h2><i class="bx bx-chevron-right"></i> Outros:</h2>
-      <p>Valores a partir de: <span>R$ 35,00</span>.</p>
+      <p>Valores a partir de: <span>R$ 2,50</span> a <span>R$ 35,00.</span></p>
     </div>
     <section id="others" class="products">
       <div class="container">

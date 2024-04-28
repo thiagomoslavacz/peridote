@@ -182,42 +182,48 @@ section#hero .container .links {
   gap: 50px;
 }
 
-section#hero .container .links a {
+section#hero .container .links .action {
   color: white;
   font-size: 40px;
   transition: opacity 0.3s ease;
 }
 
-section#hero .container .links a:hover {
+section#hero .container .links .action:hover {
   opacity: 0.8;
 }
 
-section#hero .container .links a.action {
+section#hero .container .links .action {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-section#hero .container .links a.action i {
+section#hero .container .links .action i {
   font-size: 40px;
   background-color: #135700;
   padding: 8px;
   border-radius: 50%;
 }
 
-section#hero .container .links a.action {
+section#hero .container .links .action {
   font-size: 20px;
 }
 
 section#hero .container .adress {
   font-weight: 600;
   font-size: 18px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 section#hero .container .adress span {
   color: black;
-  border-bottom: 1px solid rgb(33, 33, 33);
 }
 
 section#hero .background {
