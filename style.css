@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* Variables */
 :root {
   --title-font: "Dancing Script", cursive;
   --paragraph-font: "Open Sans", sans-serif;
@@ -9,6 +10,8 @@
   --background-color: #232323;
 }
 
+
+/* General Settings */
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +47,6 @@ img.border-img {
 }
 
 /* Header */
-
 header {
   position: sticky;
   top: 0;
@@ -141,7 +143,6 @@ header a.action:hover::before {
 }
 
 /* Hero */
-
 section#hero {
   display: flex;
   position: relative;
@@ -238,7 +239,6 @@ section#hero .background {
 }
 
 /* About */
-
 section#about {
   margin: 100px 0;
   text-align: center;
@@ -268,7 +268,6 @@ section#about .wrap i {
 }
 
 /* Parallax */
-
 section#parallax {
   background: black url("imagens/background/parallax.png") no-repeat center
     fixed;
@@ -301,7 +300,6 @@ section#parallax .background p span {
 }
 
 /* Mugs About */
-
 section#mugs-about {
   width: 900px;
   margin: 0 auto;
@@ -375,7 +373,6 @@ section#mugs-about .container .info:nth-child(1) i {
 }
 
 /* Products */
-
 .products {
   position: relative;
   display: flex;
@@ -476,8 +473,7 @@ div.info-tag p span {
   padding-bottom: 30px;
 }
 
-/* Adress */
-
+/* Adress Footer */
 .adress-footer {
   margin-top: 150px;
   padding: 50px 0 50px 50px;
@@ -510,7 +506,6 @@ div.info-tag p span {
 }
 
 /* Footer */
-
 footer {
   background-color: black;
   color: #ccc;
@@ -572,6 +567,7 @@ footer .col:nth-child(2) a span {
   line-height: 0;
 }
 
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -645,6 +641,30 @@ footer .col:nth-child(2) a span {
   font-size: 40px;
   cursor: pointer;
   transition: color 0.3s ease;
+}
+
+/* Float Button */
+.float-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 10px 10px;
+  font-size: 60px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #2ec25384;
+  color: white;
+  background-color: #2ec252;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
 }
 
 /* Media Queries */
@@ -798,6 +818,7 @@ footer .col:nth-child(2) a span {
 
   section.adress-footer {
     padding: 50px 0;
+    text-align: center;
     place-content: center;
   }
 
@@ -809,5 +830,9 @@ footer .col:nth-child(2) a span {
     grid-template-columns: 1fr;
     padding-inline: 0;
     gap: 50px;
+  }
+
+  .float-button .button {
+    font-size: 50px;
   }
 }
