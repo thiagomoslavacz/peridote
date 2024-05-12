@@ -8,18 +8,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// PDF
-function downloadPDF() {
-  const pdfURL = "Peridote.pdf";
-  const link = document.createElement("a");
-  link.href = pdfURL;
-  link.download = "peridote-atelie.pdf";
-
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
 // Menu
 document.addEventListener("DOMContentLoaded", function () {
   var menuButton = document.getElementById("menu");
